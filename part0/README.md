@@ -2,6 +2,6 @@
 
 Salvatore Fadda
 
-Full Stack Web Development part0 exercises 0.1.-0.6 submission folder.
+Full Stack Web Development part0 exercises 0.4 - 0.5 - 0.6 submission folder.
 
 
