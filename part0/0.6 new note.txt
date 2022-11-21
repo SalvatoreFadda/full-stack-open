@@ -1,0 +1,16 @@
+note over browser:
+The data entered within the form, 
+following the click on the submit button 
+are sent as part of POST-request payload in json format:
+{content: "test", date: "2022-11-21T11:17:28.155Z"}
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over server:
+The server reads the data from the body of the 
+POST-request and creates a new note object,
+returning status 201 and the reponse in json
+end note
+
+server-->browser: {"message":"note created"}
