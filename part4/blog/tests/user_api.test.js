@@ -1,12 +1,18 @@
 const supertest = require('supertest')
 const mongoose = require('mongoose')
-const app = require('../app') // Import your express app
-const User = require('../models/user') // Import your User model
+const helper = require('./test_helper')
+const app = require('../app') 
+const User = require('../models/user') 
 
-const api = supertest(app) // Wrap your app with supertest for easy HTTP requests
+const api = supertest(app)
 
 beforeEach(async () => {
-  await User.deleteMany({}) // Clear the users collection before each test
+  await User.deleteMany({})
+
+  for (let user of helper.initialUsers) {
+    let userObject = new User(user)
+    await userObject.save()
+  }
 })
 
 test('creation fails with proper status code and message if username is missing', async () => {
@@ -46,14 +52,12 @@ test('creation fails with proper status code and message if username is not uniq
     name: 'Test Name',
   }
 
-  // Create the user for the first time
   await api
     .post('/api/users')
     .send(newUser)
     .expect(200)
     .expect('Content-Type', /application\/json/)
 
-  // Try to create the same user again
   const result = await api
     .post('/api/users')
     .send(newUser)
@@ -64,5 +68,5 @@ test('creation fails with proper status code and message if username is not uniq
 })
 
 afterAll(() => {
-  mongoose.connection.close() // Close the mongoose connection after all tests are done
+  mongoose.connection.close() 
 })
