@@ -2,4 +2,4 @@
 
 Salvatore Fadda
 
-Full Stack Web Development all part 4 submission repo.
+Full Stack Web Development all exercises part 4 submission repo.
