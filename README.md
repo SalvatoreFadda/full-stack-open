@@ -2,4 +2,4 @@
 
 Salvatore Fadda
 
-Full Stack Web Development exercises submission repo.
+Full Stack Web Development exercises submission repo. Perts 0 to 6.
