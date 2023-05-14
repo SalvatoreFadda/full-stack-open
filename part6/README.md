@@ -2,4 +2,4 @@
 
 Salvatore Fadda
 
-Full Stack Web Development part 6 all exercises submission repo.
+Full Stack Web Development part 6 exercises from 6.1 to 6.19 submission repo.
