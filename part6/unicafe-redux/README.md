@@ -2,4 +2,4 @@
 
 Salvatore Fadda
 
-Full Stack Web Development part 6 all exercises submission repo.
+Full Stack Web Development part 6 unicafe-redux all exercises submission repo.
