@@ -2,4 +2,4 @@
 
 Salvatore Fadda
 
-Full Stack Web Development exercises submission repo. Parts 0 to 6.
+Full Stack Web Development React + Express course exercises submission repo. Parts 0 to 6.
